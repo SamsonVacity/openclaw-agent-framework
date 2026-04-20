@@ -1,0 +1,8 @@
+{
+  "name": "songforge",
+  "version": "1.0.0",
+  "created": "2026-04-12",
+  "author": "秘苏",
+  "tags": ["music", "song", "lyrics", "generation", "songwriting", "ai-music"],
+  "description": "SongForge AI音乐创作流水线：三步串联MiniMax歌词→DeepSeek润色→Mureka生成"
+}

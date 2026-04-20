@@ -27,8 +27,15 @@ message-hub-windows/
 *.tar.gz
 *.mmdb
 
+# Embedded git repositories (not submodules)
+evolver/
+skills/capability-evolver/
+
 # ClaWHub
 .clawhub/
+
+# OpenClaw state (runtime, not source)
+.openclaw/workspace-state.json
 
 # Secrets (if any in future)
 .env
