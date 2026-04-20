@@ -160,6 +160,43 @@ git add -A && git commit -m "type: 简短描述\n\n详细说明（可选）"
 - ❌ 不测试就标记 pass
 - ❌ 不更新 progress 就结束
 
+## E2E 测试验证（Anthropic 模式）
+
+> Claude 经常不经验证就标记功能为完成。使用浏览器自动化后，Claude 能识别仅从代码看不出的 bug。
+
+### 必须验证的场景
+
+1. **功能完成后** - 用 browser 工具打开页面，执行用户操作，验证结果
+2. **Session 开始时** - 先跑一次基础 E2E 测试确认环境正常
+3. **回归测试** - 实现新功能前确保基础功能正常
+
+### 验证流程
+
+```javascript
+// 1. 启动浏览器
+browser.start({ profile: "openclaw" })
+
+// 2. 打开目标页面
+browser.open({ url: "http://localhost:3000" })
+
+// 3. 执行用户操作
+browser.act({ kind: "click", ref: "button-id" })
+browser.act({ kind: "type", ref: "input", text: "内容" })
+
+// 4. 截图验证
+browser.screenshot({ fullPage: true })
+```
+
+### Pre-Yield 检查
+
+每次 session 结束前必须执行：
+
+```bash
+~/.openclaw/workspace/.scripts/pre-commit-check.sh
+```
+
+如果有未提交的代码，禁止结束 session。
+
 ## Skill Paths (Conditional Activation)
 
 Skills can declare `paths` in their frontmatter. When declared, they only activate when relevant files are operated on:
