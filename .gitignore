@@ -37,7 +37,18 @@ skills/capability-evolver/
 # OpenClaw state (runtime, not source)
 .openclaw/workspace-state.json
 
+# Sensitive configs (contain API keys/tokens)
+TOOLS.md
+MEMORY.md
+openclaw.json
+*.json
+!.gitignore
+
 # Secrets (if any in future)
 .env
 *.pem
 *.key
+
+# Token files
+*token*
+*secret*
