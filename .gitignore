@@ -16,10 +16,31 @@ __pycache__/
 *.tmp
 *.log
 
-# Message hub (per-machine)
+# Sensitive configs (contain API keys/tokens)
+TOOLS.md
+MEMORY.md
+openclaw.json
+
+# Personal memory and logs
+memory/
+
+# Migration scripts (contain sensitive configs)
+migrate_agents.py
+merge_config_simple.py
+update_feishu_config.py
+remount-nas.sh
+ssh_test.py
+
+# Migration docs
+*迁移方案*.md
+
+# Message hub (per-machine configs)
 message-hub/
 message-hub-nas/
 message-hub-windows/
+
+# State files
+state/
 
 # Large files
 *.zip
@@ -37,18 +58,9 @@ skills/capability-evolver/
 # OpenClaw state (runtime, not source)
 .openclaw/workspace-state.json
 
-# Sensitive configs (contain API keys/tokens)
-TOOLS.md
-MEMORY.md
-openclaw.json
-*.json
-!.gitignore
-
-# Secrets (if any in future)
+# Secrets
 .env
 *.pem
 *.key
-
-# Token files
 *token*
 *secret*
