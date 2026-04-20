@@ -1,0 +1,15 @@
+# Progress Log
+# 格式: YYYY-MM-DD HH:MM | 功能ID | 状态 | 说明
+
+## 当前: 功能ID - 功能名
+状态: 进行中
+开始: YYYY-MM-DD HH:MM
+
+## 完成的功能
+- YYYY-MM-DD | #ID | ✅ | 功能名
+
+## 进行中的功能
+- YYYY-MM-DD | #ID | 🟡 | 功能名 (进度: x%)
+
+## 待处理
+- #ID | 功能名 (优先级: high/medium/low)

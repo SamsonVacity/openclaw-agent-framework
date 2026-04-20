@@ -135,6 +135,31 @@ git add -A && git commit -m "type: 简短描述\n\n详细说明（可选）"
 2. 每次 session 结束时，更新 PROGRESS.md 并 commit
 3. 任务完成后，从 tasks.md 移到 completed
 
+## Single-Task 约束（Anthropic 模式）
+
+**来自 Anthropic "Effective Harnesses for Long-Running Agents" 研究：**
+
+> Claude 最大的失败模式是"总想一口气完成所有功能"。
+
+**执行规则：**
+1. 每次只做**一件事**
+2. 从 feature-list.json 选最高优先级未完成功能
+3. 完成 → 测试 → 更新 feature-list → 更新 progress → git commit
+4. 禁止同时处理多个功能
+
+**完成信号：**
+```
+✅ 功能完成: <feature>
+📋 剩余: <n> 个
+📝 下一步: <next>
+```
+
+**禁止事项：**
+- ❌ 同时做多个功能
+- ❌ 实现一半就结束
+- ❌ 不测试就标记 pass
+- ❌ 不更新 progress 就结束
+
 ## Skill Paths (Conditional Activation)
 
 Skills can declare `paths` in their frontmatter. When declared, they only activate when relevant files are operated on:

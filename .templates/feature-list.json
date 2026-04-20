@@ -1,0 +1,20 @@
+{
+  "project": "project-name",
+  "version": "1.0.0",
+  "created": "YYYY-MM-DD",
+  "totalFeatures": 0,
+  "features": [
+    {
+      "id": 1,
+      "category": "functional",
+      "priority": "high",
+      "description": "功能描述",
+      "steps": [
+        "步骤1",
+        "步骤2"
+      ],
+      "pass": false,
+      "notes": ""
+    }
+  ]
+}
