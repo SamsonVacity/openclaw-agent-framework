@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Temporary
+*.tmp
+*.log
+
+# Message hub (per-machine)
+message-hub/
+message-hub-nas/
+message-hub-windows/
+
+# Large files
+*.zip
+*.tar
+*.tar.gz
+*.mmdb
+
+# ClaWHub
+.clawhub/
+
+# Secrets (if any in future)
+.env
+*.pem
+*.key
