@@ -10,7 +10,6 @@
 ### 每小时（低优先级）
 - [ ] **memory-evolution技能检查**：如果 installed 但未启用，可考虑激活
 - [ ] 检查 `memory/YYYY-MM-DD.md` 是否有未整理的日志
-- [ ] **每日 Git 检查通知**：检查 `~/.openclaw/agents/main/inbox/daily-git-notify.md`，如有未读通知则发送给森哥，然后清空文件
 
 ### 每6小时
 - [ ] 读取今日 `memory/2026-MM-DD.md`，提炼值得长期记忆的内容到 MEMORY.md
